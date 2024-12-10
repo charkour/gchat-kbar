@@ -5,5 +5,17 @@
     "manifest_version": 3,
     "action": {
         "default_popup": "index.html"
-    }
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "src/content.tsx"
+            ],
+            "matches": [
+                "https://mail.google.com/*",
+                "https://chat.google.com/*"
+            ],
+            "all_frames": true
+        }
+    ]
 }
